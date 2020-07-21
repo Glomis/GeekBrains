@@ -13,9 +13,9 @@ import Foundation
 enum PartState {
     case open, closed
 }
+
+
 struct Car {
-    
-    
     let mark: String
     let yer: Int
     let trunkVolume: Int
