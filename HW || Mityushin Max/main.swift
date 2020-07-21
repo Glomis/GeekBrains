@@ -9,7 +9,19 @@
 import Foundation
 
 // Создать структуру
+
+enum PartState {
+    case open, closed
+}
 struct Car {
     
     
+    let mark: String
+    let yer: Int
+    let trunkVolume: Int
+    let engineState: PartState
+    let windowState: PartState
+    let filledTrunkVolume: Int
 }
+
+
