@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4931266D24C781FC0083A704 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931266C24C781FC0083A704 /* main.swift */; };
+		4946243124CEB69100B904CE /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946243024CEB69100B904CE /* Car.swift */; };
+		4946243324CEB6A100B904CE /* SportCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946243224CEB6A100B904CE /* SportCar.swift */; };
+		4946243524CEB6B300B904CE /* TrunkCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4946243424CEB6B300B904CE /* TrunkCar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		4931266924C781FC0083A704 /* HW || Mityushin Max */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "HW || Mityushin Max"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931266C24C781FC0083A704 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4946243024CEB69100B904CE /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		4946243224CEB6A100B904CE /* SportCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCar.swift; sourceTree = "<group>"; };
+		4946243424CEB6B300B904CE /* TrunkCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunkCar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 		4931266B24C781FC0083A704 /* HW || Mityushin Max */ = {
 			isa = PBXGroup;
 			children = (
+				4946243024CEB69100B904CE /* Car.swift */,
+				4946243224CEB6A100B904CE /* SportCar.swift */,
+				4946243424CEB6B300B904CE /* TrunkCar.swift */,
 				4931266C24C781FC0083A704 /* main.swift */,
 			);
 			path = "HW || Mityushin Max";
@@ -120,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4946243324CEB6A100B904CE /* SportCar.swift in Sources */,
+				4946243124CEB69100B904CE /* Car.swift in Sources */,
 				4931266D24C781FC0083A704 /* main.swift in Sources */,
+				4946243524CEB6B300B904CE /* TrunkCar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
