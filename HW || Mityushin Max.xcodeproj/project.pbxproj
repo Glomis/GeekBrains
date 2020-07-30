@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4931266D24C781FC0083A704 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931266C24C781FC0083A704 /* main.swift */; };
+		49FE693D24D2E26F00C61DB3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FE693C24D2E26F00C61DB3 /* Extensions.swift */; };
+		49FE693F24D2E28B00C61DB3 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FE693E24D2E28B00C61DB3 /* Protocol.swift */; };
+		49FE694124D2E29600C61DB3 /* SportCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FE694024D2E29600C61DB3 /* SportCar.swift */; };
+		49FE694324D2EB1100C61DB3 /* TrunkCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FE694224D2EB1100C61DB3 /* TrunkCar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		4931266924C781FC0083A704 /* HW || Mityushin Max */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "HW || Mityushin Max"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931266C24C781FC0083A704 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		49FE693C24D2E26F00C61DB3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		49FE693E24D2E28B00C61DB3 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		49FE694024D2E29600C61DB3 /* SportCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCar.swift; sourceTree = "<group>"; };
+		49FE694224D2EB1100C61DB3 /* TrunkCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunkCar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 		4931266B24C781FC0083A704 /* HW || Mityushin Max */ = {
 			isa = PBXGroup;
 			children = (
+				49FE693E24D2E28B00C61DB3 /* Protocol.swift */,
+				49FE693C24D2E26F00C61DB3 /* Extensions.swift */,
+				49FE694024D2E29600C61DB3 /* SportCar.swift */,
+				49FE694224D2EB1100C61DB3 /* TrunkCar.swift */,
 				4931266C24C781FC0083A704 /* main.swift */,
 			);
 			path = "HW || Mityushin Max";
@@ -121,6 +133,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4931266D24C781FC0083A704 /* main.swift in Sources */,
+				49FE693D24D2E26F00C61DB3 /* Extensions.swift in Sources */,
+				49FE693F24D2E28B00C61DB3 /* Protocol.swift in Sources */,
+				49FE694324D2EB1100C61DB3 /* TrunkCar.swift in Sources */,
+				49FE694124D2E29600C61DB3 /* SportCar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
