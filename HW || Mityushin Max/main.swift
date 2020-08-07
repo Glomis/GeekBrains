@@ -8,40 +8,76 @@
 
 import Foundation
 
-
+//MARK: Protocols
 protocol Car: CustomStringConvertible {
     var brand: String { get }
     var productionYear: Int { get }
 }
 
 
-class SportCar: Car {
+
+protocol Payfull {
+    var deposit: Double { get set }
+    var car: Car { get }
     
+    func spendMoney(spend: Double)
+}
+
+
+//MARK: Enums
+enum PaintError: LocalizedError {
+    case noMoney
+    case oldCar
+    case unownError
+    
+    
+    var errorDescription: String? {
+        switch self {
+        case .noMoney:
+           return "dd"
+        case .oldCar:
+           return "wdsc"
+        case .unownError:
+           return "cw"
+        }
+    }
+}
+
+enum Result<T, E> {
+    case success(T)
+    case failuer(E)
+}
+
+
+//MARK: Classes
+class ErrorHandler {
+    func handle(error: Error) {
+        print(error.localizedDescription)
+    }
+}
+
+class SportCar: Car {
     var brand: String
     var productionYear: Int
-    var deposit: Double
     
+    init(brand: String, productionYear: Int) {
         self.brand = brand
         self.productionYear = productionYear
-        self.deposit = deposit
     }
     
     var description: String {
         return "\(brand) of \(productionYear)"
     }
 }
-
 
 class TrunkCar: Car {
-    
     var brand: String
     var productionYear: Int
-    var deposit: Double
     
-    init(brand: String, productionYear: Int, deposit: Double) {
+    
+    init(brand: String, productionYear: Int) {
         self.brand = brand
         self.productionYear = productionYear
-        self.deposit = deposit
     }
     
     var description: String {
@@ -49,8 +85,7 @@ class TrunkCar: Car {
     }
 }
 
-class Client: CustomStringConvertible {
-    
+class Client: CustomStringConvertible, Payfull {
     var name: String
     var deposit: Double
     var car: Car
@@ -64,11 +99,14 @@ class Client: CustomStringConvertible {
     var description: String {
         return "\(name) on \(car), deposit: \(deposit)"
     }
+    internal func spendMoney(spend: Double) {
+        deposit -= spend
+    }
 }
 
-struct Queue<T>: CustomStringConvertible {
+struct Queue<T: Payfull>: CustomStringConvertible {
     
-    private var elements: [T] = []
+     var elements: [T] = []
     
     var description: String {
         return "Clients:\n\(elements)"
@@ -85,27 +123,50 @@ struct Queue<T>: CustomStringConvertible {
         return client
     }
     
-    mutating func paint(clients: [T]) -> [T] {
+   private func priceOfPaint(client: T) -> Double {
+        var paintPrice = 0.0
+        if client.car.productionYear < 2015 {
+            paintPrice = 5000.00
+        } else if client.car.productionYear < 2000 {
+            paintPrice = 20000.00
+            print("Sorry, your car is very old.")
+        } else {
+            paintPrice = 10000.00
+        }
+        return paintPrice
+    }
+    
+    mutating func paint() -> Result<[T], PaintError> {
         var temp: [T] = []
         
-        return temp
+        for car in elements {
+            let price = priceOfPaint(client: car)
+            if price > car.deposit {
+                return Result.failuer(.noMoney)
+            } else {
+                car.spendMoney(spend: price)
+                temp.append(car)
+            }
+        }
+        return Result.success(temp)
     }
-
-    
 }
 
 
-let carOne = SportCar(brand: "BMW", productionYear: 2020, deposit: 500)
-let carTwo = TrunkCar(brand: "Truck", productionYear: 2005, deposit: 400)
+//MARK: Realisation
+let carOne = SportCar(brand: "BMW", productionYear: 2020)
+let carTwo = TrunkCar(brand: "Truck", productionYear: 1990)
 
 var queue = Queue<Client>()
 
-let ivan = Client(name: "Ivan", car: carOne, deposit: 1000)
-let petr = Client(name: "Petr", car: carTwo, deposit: 500)
+let ivan = Client(name: "Ivan", car: carOne, deposit: 10000)
+let petr = Client(name: "Petr", car: carTwo, deposit: 2000)
 
 queue.enqeue(newCar: ivan)
 queue.enqeue(newCar: petr)
 
+let paintQueue = queue.paint()
 
 print(queue)
 
+print(paintQueue)
