@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Own_VK_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwC-CU-Jki">
+                                <rect key="frame" x="20" y="64" width="335" height="694"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-wp-TCF">
+                                        <rect key="frame" x="101.66666666666669" y="66" width="132" height="46"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnd-7K-Stv">
+                                        <rect key="frame" x="136.66666666666666" y="178" width="62" height="33"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-j1-uTq">
+                                        <rect key="frame" x="114.33333333333334" y="274" width="107" height="33"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-bC-D3j">
+                                        <rect key="frame" x="42.666666666666657" y="315" width="249.99999999999997" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="iTf-Gt-Cxv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-N5-q6u">
+                                        <rect key="frame" x="92.666666666666686" y="401" width="150" height="45"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="V9l-Iv-awk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <state key="normal" title="Enter">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBj-IK-wbf"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-Mj-cDU">
+                                        <rect key="frame" x="42.666666666666657" y="219" width="249.99999999999997" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ih9-pR-up6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nnd-7K-Stv" firstAttribute="top" secondItem="Gmy-wp-TCF" secondAttribute="bottom" constant="66" id="1up-CK-1JW"/>
+                                    <constraint firstItem="dRz-Mj-cDU" firstAttribute="centerX" secondItem="Nnd-7K-Stv" secondAttribute="centerX" id="2E3-kg-oGo"/>
+                                    <constraint firstItem="QtS-N5-q6u" firstAttribute="bottom" secondItem="nMc-k5-imt" secondAttribute="bottom" constant="-20" id="9mv-9j-6wm"/>
+                                    <constraint firstItem="QtS-N5-q6u" firstAttribute="centerX" secondItem="wNb-bC-D3j" secondAttribute="centerX" constant="0.16666666666665719" id="Dxz-jo-pPA"/>
+                                    <constraint firstItem="Gmy-wp-TCF" firstAttribute="top" secondItem="nMc-k5-imt" secondAttribute="top" constant="66" id="Kfz-rH-BwL"/>
+                                    <constraint firstItem="wNb-bC-D3j" firstAttribute="top" secondItem="Idr-j1-uTq" secondAttribute="bottom" constant="8" id="ONW-MS-anC"/>
+                                    <constraint firstItem="dRz-Mj-cDU" firstAttribute="top" secondItem="Nnd-7K-Stv" secondAttribute="bottom" constant="8" id="R69-iO-iJT"/>
+                                    <constraint firstItem="Gmy-wp-TCF" firstAttribute="centerX" secondItem="nMc-k5-imt" secondAttribute="centerX" id="SGq-U8-Ook"/>
+                                    <constraint firstItem="QtS-N5-q6u" firstAttribute="top" secondItem="wNb-bC-D3j" secondAttribute="bottom" constant="52" id="TXo-ab-O8k"/>
+                                    <constraint firstItem="wNb-bC-D3j" firstAttribute="centerX" secondItem="Idr-j1-uTq" secondAttribute="centerX" constant="-0.16666666666665719" id="Yqe-MV-boq"/>
+                                    <constraint firstItem="Nnd-7K-Stv" firstAttribute="centerX" secondItem="Gmy-wp-TCF" secondAttribute="centerX" id="bHO-Tl-bvR"/>
+                                    <constraint firstItem="Idr-j1-uTq" firstAttribute="top" secondItem="dRz-Mj-cDU" secondAttribute="bottom" constant="21" id="cjy-2m-yaR"/>
+                                    <constraint firstItem="Idr-j1-uTq" firstAttribute="centerX" secondItem="dRz-Mj-cDU" secondAttribute="centerX" constant="0.16666666666665719" id="g4W-66-OIk"/>
+                                    <constraint firstItem="Gmy-wp-TCF" firstAttribute="centerX" secondItem="g1s-Md-bWQ" secondAttribute="centerX" id="zoJ-Zf-IVy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nMc-k5-imt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="g1s-Md-bWQ"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53674064568447333" green="0.8022211857714876" blue="0.83589708014571695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PwC-CU-Jki" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1cS-Qy-3mp"/>
+                            <constraint firstItem="PwC-CU-Jki" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VsH-fa-EvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PwC-CU-Jki" secondAttribute="bottom" constant="20" id="mTG-ht-4kW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PwC-CU-Jki" secondAttribute="trailing" constant="20" id="xsy-CJ-ahO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterBtn" destination="QtS-N5-q6u" id="ndd-B8-gEF"/>
+                        <outlet property="loginTF" destination="dRz-Mj-cDU" id="sIs-8m-khJ"/>
+                        <outlet property="passwordTF" destination="wNb-bC-D3j" id="s3r-B1-f6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.50000000000001"/>
+        </scene>
+    </scenes>
+</document>
